@@ -4,441 +4,562 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090b10">
-  <meta name="description" content="Wiki de INFERNMC Network. Información, FULLPVP, reglas y comunidad.">
-  <title>INFERNMC Network | Wiki</title>
+  <meta name="theme-color" content="#080b12">
+
+  <title>INFERNMC Network | Wiki Oficial</title>
+
+  <meta name="description" content="Wiki oficial de INFERNMC Network. Descubre nuestro modo FULLPVP, las reglas, cómo conectarte y las novedades del servidor.">
+  <meta property="og:title" content="INFERNMC Network | Wiki Oficial">
+  <meta property="og:description" content="Toda la información de INFERNMC Network en un solo lugar. FULLPVP, reglas, conexión y comunidad.">
+  <meta property="og:type" content="website">
+
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
 
+  <!-- BARRA DE NAVEGACIÓN -->
   <header class="topbar">
-    <a class="brand" href="#inicio">
-      <span class="brand-mark">N</span>
-      <span class="brand-copy">
-        <strong>INFERN<span>MC</span></strong>
+    <a class="brand" href="#inicio" aria-label="INFERNMC Network, inicio">
+      <span class="brand-mark">I</span>
+      <span>
+        INFERNMC
         <small>NETWORK WIKI</small>
       </span>
     </a>
 
-    <nav class="top-links">
+    <nav class="nav-links" aria-label="Navegación principal">
       <a href="#inicio">Inicio</a>
-      <a href="#modos">FULLPVP</a>
-      <a href="#rangos">Rangos</a>
+      <a href="#conexion">Conexión</a>
+      <a href="#fullpvp">FULLPVP</a>
       <a href="#reglas">Reglas</a>
-      <a href="#faq">Ayuda</a>
+      <a href="#rangos">Rangos</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://discord.gg/r2YBStG73s"
+         target="_blank"
+         rel="noopener noreferrer"
+         data-discord>Discord</a>
     </nav>
 
-    <a class="discord-link"
-       href="https://discord.gg/r2YBStG73s"
-       target="_blank"
-       rel="noopener noreferrer">
-      Discord ↗
-    </a>
-
-    <button class="menu-toggle" id="menuToggle"
-      aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <button class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false">
+      Menú
+    </button>
   </header>
 
-  <main id="inicio">
-
-    <div class="development-banner">
-      <span class="development-dot"></span>
-      <div>
-        <strong>INFERNMC NETWORK ESTÁ EN DESARROLLO</strong>
-        <p>Estamos trabajando para preparar la network.
-        Próximamente anunciaremos más novedades.</p>
-      </div>
-      <span class="development-tag">EN DESARROLLO</span>
-    </div>
-
-    <section class="hero">
-      <div class="hero-content">
-        <div class="eyebrow">CENTRO DE INFORMACIÓN OFICIAL</div>
-
-        <h1>
-          EL COMBATE<br>
-          COMIENZA<br>
-          <em>AQUÍ.</em>
-        </h1>
-
-        <p>
-          Bienvenido a <strong>INFERNMC Network</strong>, una network
-          de Minecraft que se encuentra en desarrollo.
-          Prepárate para conocer nuestro modo FULLPVP,
-          las normas y todas las novedades.
-        </p>
-
-        <div class="server-box">
-          <div class="server-icon">N</div>
-          <div class="server-data">
-            <small>IP DEL SERVIDOR</small>
-            <strong>infernmc.nyxelis.tech</strong>
-          </div>
-          <button class="copy-button" id="copyIp">Copiar IP</button>
-        </div>
-
-        <a class="button-primary"
-           href="https://discord.gg/r2YBStG73s"
-           target="_blank"
-           rel="noopener noreferrer">
-          Unirme al Discord ↗
-        </a>
-
-        <p class="hero-note">
-          Estado actual: servidor y wiki en desarrollo.
-        </p>
-      </div>
-
-      <div class="hero-side" aria-hidden="true">
-        <div class="rune">N</div>
-        <div class="side-caption">INFERNMC NETWORK</div>
-      </div>
-    </section>
-
-    <div class="content-wrap">
-
-      <aside class="sidebar">
-        <div class="side-label">WIKI PRINCIPAL</div>
-        <a class="side-link selected" href="#inicio">⌂ Inicio</a>
-        <a class="side-link" href="#como-entrar">➜ Cómo entrar</a>
-        <a class="side-link" href="#modos">⚔ FULLPVP</a>
-        <a class="side-link" href="#rangos">◇ Rangos</a>
-        <a class="side-link" href="#reglas">⚑ Reglas</a>
-        <a class="side-link" href="#faq">? Preguntas frecuentes</a>
-
-        <div class="sidebar-card">
-          <strong>¿Necesitas ayuda?</strong>
-          <p>Entra a nuestro Discord para consultar novedades y recibir información.</p>
-          <a href="https://discord.gg/r2YBStG73s"
-             target="_blank" rel="noopener noreferrer">
-            Ir al Discord →
-          </a>
-        </div>
-      </aside>
-
-      <div class="main-column">
-
-        <section class="section-card" id="bienvenida">
-          <div class="eyebrow">BIENVENIDO A LA NETWORK</div>
-          <h2>Una nueva aventura está en camino</h2>
-          <p class="muted">
-            Esta es la wiki informativa de INFERNMC Network.
-            Aquí publicaremos información del servidor, normas,
-            novedades y detalles importantes para los jugadores.
-            El proyecto continúa en desarrollo, por lo que el contenido
-            puede cambiar con el tiempo.
-          </p>
-
-          <div class="info-grid">
-            <article class="info-tile">
-              <div class="tile-icon">⚔</div>
-              <h3>FULLPVP</h3>
-              <p>Conoce el modo de juego principal previsto para la network.</p>
-              <a href="#modos">Ver información →</a>
-            </article>
-
-            <article class="info-tile">
-              <div class="tile-icon">⚑</div>
-              <h3>Reglas</h3>
-              <p>Consulta las normas generales de convivencia y juego limpio.</p>
-              <a href="#reglas">Leer las reglas →</a>
-            </article>
-
-            <article class="info-tile">
-              <div class="tile-icon">✦</div>
-              <h3>Comunidad</h3>
-              <p>Únete al Discord para conocer los anuncios y avances.</p>
-              <a href="https://discord.gg/r2YBStG73s"
-                 target="_blank" rel="noopener noreferrer">
-                Unirme → 
-              </a>
-            </article>
-          </div>
-        </section>
-
-        <section class="section-card" id="como-entrar">
-          <div class="eyebrow">GUÍA PARA JUGADORES</div>
-          <h2>Cómo entrar al servidor</h2>
-
-          <ol class="steps">
-            <li>
-              <span>1</span>
-              <div>
-                <strong>Abre Minecraft</strong>
-                <p>Inicia el juego y entra en Multijugador.</p>
-              </div>
-            </li>
-            <li>
-              <span>2</span>
-              <div>
-                <strong>Añade un servidor</strong>
-                <p>Selecciona la opción para añadir una nueva dirección.</p>
-              </div>
-            </li>
-            <li>
-              <span>3</span>
-              <div>
-                <strong>Introduce la IP</strong>
-                <p class="code-line">
-                  infernmc.nyxelis.tech
-                  <button class="inline-copy"
-                    data-copy="infernmc.nyxelis.tech">Copiar</button>
-                </p>
-              </div>
-            </li>
-            <li>
-              <span>4</span>
-              <div>
-                <strong>Comprueba los anuncios</strong>
-                <p>
-                  La disponibilidad y la versión compatible se anunciarán
-                  por los canales oficiales cuando estén confirmadas.
-                </p>
-              </div>
-            </li>
-          </ol>
-
-          <div class="notice">
-            <span>!</span>
-            <p>
-              <strong>Importante:</strong> INFERNMC Network está en desarrollo.
-              La IP, la versión y la fecha de apertura deben confirmarse
-              antes de anunciar el acceso como disponible.
-            </p>
-          </div>
-        </section>
-
-        <section class="section-card" id="modos">
-          <div class="eyebrow">NUESTRA MODALIDAD</div>
-          <h2>Modo de juego</h2>
-          <p class="muted">
-            Esta es la modalidad presentada para INFERNMC Network.
-            Publicaremos sus características definitivas conforme avance
-            el desarrollo.
-          </p>
-
-          <article class="mode-card">
-            <div class="mode-art pvp-art">⚔</div>
-            <div class="mode-content">
-              <span class="tag">EN DESARROLLO</span>
-              <h3>FULLPVP</h3>
-              <p>
-                Prepárate para enfrentarte a otros jugadores,
-                mejorar tus habilidades de combate y demostrar
-                lo que eres capaz de hacer en el campo de batalla.
-              </p>
-              <p>
-                Próximamente se publicarán los detalles sobre
-                equipamiento, mecánicas, eventos y características
-                específicas del modo.
-              </p>
-            </div>
-          </article>
-        </section>
-
-        <section class="section-card" id="rangos">
-          <div class="eyebrow">PROGRESO Y BENEFICIOS</div>
-          <h2>Rangos y ventajas</h2>
-          <p class="muted">
-            La información sobre rangos y beneficios todavía está
-            pendiente de confirmación.
-          </p>
-
-          <div class="rank-placeholder">
-            <span class="rank-symbol">◇</span>
-            <div>
-              <strong>Rangos de INFERNMC</strong>
-              <p>
-                Próximamente publicaremos los rangos oficiales,
-                sus ventajas y las formas de obtenerlos.
-              </p>
-            </div>
-            <span class="tag">PRÓXIMAMENTE</span>
-          </div>
-        </section>
-
-        <section class="section-card" id="reglas">
-          <div class="eyebrow">NORMATIVA DE LA COMUNIDAD</div>
-          <h2>Reglas del servidor</h2>
-          <p class="muted">
-            Estas reglas son una propuesta general y provisional.
-            El reglamento definitivo se publicará cuando se confirme
-            oficialmente.
-          </p>
-
-          <div class="rules-list">
-            <div>
-              <span>01</span>
-              <p><strong>Respeto</strong><br>
-              Trata con respeto a todos los jugadores y miembros del staff.
-              No se permite el acoso ni las amenazas.</p>
-            </div>
-
-            <div>
-              <span>02</span>
-              <p><strong>Prohibido usar hacks</strong><br>
-              No utilices hacks, clientes ilegales o herramientas que
-              proporcionen ventajas injustas.</p>
-            </div>
-
-            <div>
-              <span>03</span>
-              <p><strong>Abuso de errores</strong><br>
-              No aproveches bugs, exploits o duplicaciones para conseguir
-              ventajas. Informa al equipo si encuentras un error.</p>
-            </div>
-
-            <div>
-              <span>04</span>
-              <p><strong>Spam y flood</strong><br>
-              No satures el chat con mensajes repetidos, flood
-              o mensajes que dificulten la comunicación.</p>
-            </div>
-
-            <div>
-              <span>05</span>
-              <p><strong>Publicidad</strong><br>
-              No promociones otros servidores o comunidades sin autorización.</p>
-            </div>
-
-            <div>
-              <span>06</span>
-              <p><strong>Suplantación de identidad</strong><br>
-              No te hagas pasar por miembros del staff, otros jugadores
-              o cuentas oficiales.</p>
-            </div>
-
-            <div>
-              <span>07</span>
-              <p><strong>Estafas</strong><br>
-              No engañes a otros jugadores en intercambios o acuerdos.</p>
-            </div>
-
-            <div>
-              <span>08</span>
-              <p><strong>Privacidad</strong><br>
-              No publiques datos personales propios o de otras personas.</p>
-            </div>
-
-            <div>
-              <span>09</span>
-              <p><strong>Respeto al staff</strong><br>
-              Sigue las indicaciones del equipo y utiliza los canales
-              adecuados para reportes y apelaciones.</p>
-            </div>
-
-            <div>
-              <span>10</span>
-              <p><strong>Juego limpio</strong><br>
-              No utilices métodos externos para perjudicar a otros
-              jugadores o alterar injustamente la experiencia.</p>
-            </div>
-
-            <div>
-              <span>11</span>
-              <p><strong>Uso correcto del Discord</strong><br>
-              Respeta las normas de la comunidad y utiliza cada canal
-              para el propósito correspondiente.</p>
-            </div>
-
-            <div>
-              <span>12</span>
-              <p><strong>Respeta las decisiones</strong><br>
-              Si recibes una sanción, utiliza el procedimiento oficial
-              de apelación en lugar de generar conflictos.</p>
-            </div>
-          </div>
-
-          <div class="notice">
-            <span>!</span>
-            <p>
-              <strong>Reglamento provisional:</strong> estas normas pueden
-              modificarse. Las sanciones y reglas específicas de FULLPVP
-              se anunciarán cuando el reglamento oficial esté listo.
-            </p>
-          </div>
-        </section>
-
-        <section class="section-card" id="faq">
-          <div class="eyebrow">CENTRO DE AYUDA</div>
-          <h2>Preguntas frecuentes</h2>
-
-          <div class="faq-list">
-            <details>
-              <summary>¿Cuál es la IP de INFERNMC?</summary>
-              <p>La dirección publicada es infernmc.nyxelis.tech.
-              Comprueba los anuncios oficiales para confirmar la disponibilidad.</p>
-            </details>
-
-            <details>
-              <summary>¿Qué modo de juego tendrá la network?</summary>
-              <p>Esta wiki presenta FULLPVP como modalidad principal.
-              Sus características se publicarán cuando estén confirmadas.</p>
-            </details>
-
-            <details>
-              <summary>¿Cuándo abrirá el servidor?</summary>
-              <p>La fecha de apertura todavía debe anunciarse oficialmente.</p>
-            </details>
-
-            <details>
-              <summary>¿Dónde puedo conocer las novedades?</summary>
-              <p>Únete al Discord oficial para consultar anuncios,
-              avances e información sobre el proyecto.</p>
-            </details>
-
-            <details>
-              <summary>¿La wiki está terminada?</summary>
-              <p>No. La wiki y la network están en desarrollo.
-              El contenido se actualizará conforme avance el proyecto.</p>
-            </details>
-          </div>
-        </section>
-
-        <section class="community-banner" id="comunidad">
-          <div>
-            <div class="eyebrow">FORMA PARTE DE LA COMUNIDAD</div>
-            <h2>Únete a INFERNMC Network</h2>
-            <p>
-              Entra a nuestro Discord para conocer los avances,
-              participar en la comunidad y recibir futuras novedades.
-            </p>
-            <p class="discord-invite">discord.gg/r2YBStG73s</p>
-          </div>
-
-          <a class="button-primary"
-             href="https://discord.gg/r2YBStG73s"
-             target="_blank"
-             rel="noopener noreferrer">
-            Unirme al Discord ↗
-          </a>
-        </section>
-
-      </div>
-    </div>
-  </main>
-
-  <footer class="footer">
-    <div class="brand">
-      <span class="brand-mark">N</span>
-      <span class="brand-copy">
-        <strong>INFERN<span>MC</span></strong>
-        <small>NETWORK WIKI</small>
-      </span>
-    </div>
-
-    <p>
-      INFERNMC Network · Proyecto en desarrollo.
-      Minecraft es una marca de Mojang Studios.
-    </p>
-
-    <a href="#inicio">Volver arriba ↑</a>
-  </footer>
-
-  <div class="toast" id="toast" role="status" aria-live="polite">
-    IP copiada
+  <!-- AVISO DE DESARROLLO -->
+  <div class="development-banner">
+    <span class="development-dot"></span>
+    <strong>INFERNMC ESTÁ EN DESARROLLO</strong>
+    <span>Estamos preparando nuevas experiencias para nuestra comunidad.</span>
   </div>
 
-  <script src="script.js"></script>
+  <!-- PORTADA -->
+  <section class="hero" id="inicio">
+    <span class="hero-tag">WIKI OFICIAL · INFERNMC NETWORK</span>
+
+    <h1>
+      BIENVENIDO A
+      <span>INFERNMC</span>
+    </h1>
+
+    <p>
+      Prepárate para combatir, mejorar tu equipamiento y demostrar
+      tu habilidad en nuestro modo FULLPVP. Esta es la guía oficial
+      con la información que necesitas para formar parte de la comunidad.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#conexion">
+        Cómo conectarme
+      </a>
+
+      <a class="btn discord-invite"
+         href="https://discord.gg/r2YBStG73s"
+         target="_blank"
+         rel="noopener noreferrer"
+         data-discord>
+        Unirme al Discord
+      </a>
+    </div>
+
+    <div class="server-address">
+      <span>IP del servidor:</span>
+      <code>infernmc.nyxelis.tech</code>
+      <button id="copyIp" type="button">Copiar IP</button>
+    </div>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="content-wrap">
+
+    <!-- MENÚ LATERAL -->
+    <aside class="sidebar">
+      <h3>Contenido de la wiki</h3>
+
+      <nav aria-label="Índice de la wiki">
+        <a class="active" href="#bienvenida">Bienvenida</a>
+        <a href="#conexion">Cómo conectarse</a>
+        <a href="#fullpvp">Modo FULLPVP</a>
+        <a href="#progresion">Progresión</a>
+        <a href="#reglas">Reglas oficiales</a>
+        <a href="#rangos">Rangos</a>
+        <a href="#seguridad">Seguridad</a>
+        <a href="#faq">Preguntas frecuentes</a>
+        <a href="#comunidad">Comunidad</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+
+      <!-- BIENVENIDA -->
+      <section class="section-card" id="bienvenida">
+        <div class="section-label">INFORMACIÓN GENERAL</div>
+
+        <h2>Bienvenido a INFERNMC Network</h2>
+
+        <p>
+          INFERNMC Network es un proyecto de servidor de Minecraft
+          enfocado en ofrecer una experiencia competitiva centrada
+          en FULLPVP. Queremos construir una comunidad activa,
+          organizada y con oportunidades para que los jugadores
+          demuestren sus habilidades.
+        </p>
+
+        <p>
+          La wiki reúne las instrucciones de conexión, las normas
+          generales y la información disponible sobre el servidor.
+          Algunas características todavía pueden cambiar mientras
+          el proyecto continúa en desarrollo.
+        </p>
+
+        <div class="info-grid">
+          <article class="info-card">
+            <h3>Modo de juego</h3>
+            <p>FULLPVP. Toda la información de juego de esta wiki se centra en este modo.</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Comunidad</h3>
+            <p>Únete al Discord para consultar anuncios, novedades y futuras actualizaciones.</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Estado del proyecto</h3>
+            <p>En desarrollo. Algunas funciones y detalles todavía están pendientes de confirmación.</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Juego limpio</h3>
+            <p>El respeto, la competencia justa y la seguridad son importantes para la comunidad.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONEXIÓN -->
+      <section class="section-card" id="conexion">
+        <div class="section-label">PRIMEROS PASOS</div>
+
+        <h2>Cómo conectarte al servidor</h2>
+
+        <p>
+          Sigue estos pasos para preparar tu conexión a INFERNMC.
+          La disponibilidad del servidor y las versiones compatibles
+          deberán confirmarse mediante los anuncios oficiales.
+        </p>
+
+        <ol class="steps">
+          <li>
+            <strong>Abre Minecraft.</strong>
+            Inicia el juego con una versión compatible que haya sido
+            anunciada oficialmente.
+          </li>
+
+          <li>
+            <strong>Entra al apartado Multijugador.</strong>
+            Selecciona la opción para añadir un servidor.
+          </li>
+
+          <li>
+            <strong>Introduce los datos.</strong>
+            Puedes utilizar INFERNMC como nombre del servidor e
+            <code>infernmc.nyxelis.tech</code> como dirección.
+          </li>
+
+          <li>
+            <strong>Guarda la configuración.</strong>
+            Guarda el servidor y selecciónalo en tu lista.
+          </li>
+
+          <li>
+            <strong>Intenta conectarte.</strong>
+            Si no puedes entrar, revisa la versión del juego y consulta
+            los anuncios del Discord para verificar la disponibilidad.
+          </li>
+        </ol>
+
+        <div class="notice">
+          <strong>Importante:</strong> la IP indicada es la dirección
+          configurada para el proyecto. No significa que el servidor
+          esté actualmente en línea. Consulta Discord para conocer
+          su estado y las versiones compatibles.
+        </div>
+
+        <p>
+          <button class="btn btn-secondary"
+                  type="button"
+                  data-copy="infernmc.nyxelis.tech">
+            Copiar dirección del servidor
+          </button>
+        </p>
+      </section>
+
+      <!-- ÚNICO MODO DE JUEGO -->
+      <section class="section-card" id="fullpvp">
+        <div class="section-label">MODO DE JUEGO OFICIAL</div>
+
+        <h2>FULLPVP</h2>
+
+        <p>
+          FULLPVP es el único modo de juego presentado en esta wiki.
+          Su enfoque es el combate entre jugadores, la preparación
+          del equipamiento y la mejora de tus habilidades en PvP.
+        </p>
+
+        <div class="mode-card">
+          <h3>FULLPVP — Combate y competencia</h3>
+
+          <div class="mode-content">
+            <p>
+              Prepárate para enfrentarte a otros jugadores, organizar
+              tus recursos y mejorar tu estrategia. Antes de participar,
+              familiarízate con las normas y con las mecánicas que se
+              anuncien oficialmente.
+            </p>
+
+            <ul>
+              <li>Combate PvP entre jugadores.</li>
+              <li>Preparación y gestión del equipamiento.</li>
+              <li>Mejora de estrategias y habilidades de combate.</li>
+              <li>Competencia basada en las reglas del servidor.</li>
+              <li>Participación en futuras actividades anunciadas por el equipo.</li>
+            </ul>
+
+            <p>
+              <strong>Disponibilidad:</strong> el modo y sus mecánicas
+              concretas pueden cambiar mientras INFERNMC continúa
+              en desarrollo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROGRESIÓN -->
+      <section class="section-card" id="progresion">
+        <div class="section-label">TU EXPERIENCIA</div>
+
+        <h2>Progresión y preparación</h2>
+
+        <p>
+          Para desenvolverte mejor en FULLPVP, es importante conocer
+          tu equipamiento, utilizar tus recursos con inteligencia y
+          aprender de cada combate.
+        </p>
+
+        <div class="info-grid">
+          <article class="info-card">
+            <h3>Prepara tu equipo</h3>
+            <p>Familiarízate con las características de tus objetos y con las opciones permitidas.</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Mejora tu estrategia</h3>
+            <p>Practica movimientos, administra tus recursos y adapta tu estilo a cada enfrentamiento.</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Respeta las reglas</h3>
+            <p>La competencia debe desarrollarse de acuerdo con las normas oficiales del servidor.</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Consulta novedades</h3>
+            <p>Revisa los anuncios oficiales para conocer futuras funciones y cambios de balance.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- REGLAS -->
+      <section class="section-card" id="reglas">
+        <div class="section-label">NORMATIVA</div>
+
+        <h2>Reglas generales de INFERNMC</h2>
+
+        <p>
+          Estas son normas generales propuestas para orientar a los
+          jugadores. El equipo debe confirmar y publicar la normativa
+          definitiva antes de que se considere oficial.
+        </p>
+
+        <ol class="rules-list">
+          <li>
+            <strong>Respeto:</strong> trata correctamente a otros jugadores
+            y miembros del equipo. No se permite el acoso, las amenazas
+            ni los ataques personales.
+          </li>
+
+          <li>
+            <strong>Sin trampas:</strong> no utilices clientes modificados,
+            programas externos ni herramientas que proporcionen ventajas
+            injustas, según la normativa que establezca el servidor.
+          </li>
+
+          <li>
+            <strong>Sin exploits:</strong> no abuses de errores, fallos
+            o mecánicas defectuosas para obtener ventajas. Informa al
+            equipo cuando encuentres un problema.
+          </li>
+
+          <li>
+            <strong>Sin spam:</strong> evita repetir mensajes,
+            inundar el chat o interrumpir constantemente las conversaciones.
+          </li>
+
+          <li>
+            <strong>Sin publicidad no autorizada:</strong> no promociones
+            otros servidores, comunidades o servicios cuando las normas
+            del servidor lo prohíban.
+          </li>
+
+          <li>
+            <strong>Sin suplantación:</strong> no te hagas pasar por
+            propietarios, administradores, moderadores u otros jugadores.
+          </li>
+
+          <li>
+            <strong>Protege tus datos:</strong> no compartas contraseñas,
+            códigos de acceso ni información privada propia o ajena.
+          </li>
+
+          <li>
+            <strong>Respeta al equipo:</strong> sigue las instrucciones
+            legítimas del personal y utiliza los canales correspondientes
+            para presentar reclamaciones.
+          </li>
+
+          <li>
+            <strong>No abuses de errores:</strong> no utilices fallos
+            del sistema para duplicar objetos, alterar resultados o
+            perjudicar a la comunidad.
+          </li>
+
+          <li>
+            <strong>Competencia justa:</strong> participa en FULLPVP
+            sin utilizar métodos prohibidos para conseguir una ventaja.
+          </li>
+
+          <li>
+            <strong>Sin amenazas ni discriminación:</strong> no se
+            permiten conductas dirigidas a intimidar o atacar a otras
+            personas por sus características personales.
+          </li>
+
+          <li>
+            <strong>Respeta las decisiones de moderación:</strong>
+            si consideras que una sanción es incorrecta, presenta
+            una apelación respetuosa por los medios habilitados.
+          </li>
+        </ol>
+
+        <div class="notice">
+          <strong>Nota sobre las sanciones:</strong> las medidas
+          disciplinarias, excepciones y procedimientos de apelación
+          deben definirse en la normativa definitiva de INFERNMC.
+          Consulta los canales oficiales antes de asumir que una
+          regla provisional es definitiva.
+        </div>
+      </section>
+
+      <!-- RANGOS -->
+      <section class="section-card" id="rangos">
+        <div class="section-label">RANGOS Y BENEFICIOS</div>
+
+        <h2>Rangos de INFERNMC</h2>
+
+        <p>
+          La información sobre rangos, precios, ventajas y métodos
+          de obtención se publicará cuando el equipo la confirme.
+          No se muestran precios ni beneficios sin verificar.
+        </p>
+
+        <div class="info-grid">
+          <article class="info-card">
+            <h3>Rangos disponibles</h3>
+            <p>La lista oficial de rangos está pendiente de publicación.</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Beneficios</h3>
+            <p>Las ventajas y condiciones de cada rango se anunciarán oficialmente.</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Sorteos</h3>
+            <p>Consulta los anuncios del Discord para conocer posibles sorteos y sus condiciones.</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Compras seguras</h3>
+            <p>Utiliza únicamente métodos de compra que el equipo anuncie como oficiales.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SEGURIDAD -->
+      <section class="section-card" id="seguridad">
+        <div class="section-label">SEGURIDAD</div>
+
+        <h2>Seguridad de tu cuenta</h2>
+
+        <p>
+          Tu cuenta y tus datos personales deben mantenerse protegidos
+          al jugar y al participar en la comunidad.
+        </p>
+
+        <ul class="rules-list">
+          <li>No compartas contraseñas ni códigos de verificación.</li>
+          <li>Desconfía de enlaces sospechosos y de supuestos premios que pidan tus datos.</li>
+          <li>No descargues archivos de fuentes desconocidas que prometan ventajas.</li>
+          <li>Verifica que los anuncios y enlaces provengan de los canales oficiales.</li>
+          <li>Si detectas una estafa o un comportamiento sospechoso, informa al equipo.</li>
+        </ul>
+      </section>
+
+      <!-- PREGUNTAS FRECUENTES -->
+      <section class="section-card" id="faq">
+        <div class="section-label">AYUDA</div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-list">
+
+          <details>
+            <summary>¿Cuál es la IP del servidor?</summary>
+            <p>
+              La dirección indicada para INFERNMC es
+              <code>infernmc.nyxelis.tech</code>. Consulta Discord
+              para verificar su disponibilidad.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Qué modos de juego tiene INFERNMC?</summary>
+            <p>
+              Esta wiki presenta exclusivamente FULLPVP. No se anuncian
+              otros modos de juego aquí.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿El servidor ya está abierto?</summary>
+            <p>
+              El proyecto figura como EN DESARROLLO. Revisa el Discord
+              oficial para conocer los anuncios sobre su apertura.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Qué versión de Minecraft necesito?</summary>
+            <p>
+              La versión compatible debe confirmarse en los anuncios
+              oficiales. No se garantiza compatibilidad con una versión
+              concreta hasta que sea anunciada.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Dónde puedo consultar las novedades?</summary>
+            <p>
+              Puedes unirte al Discord de INFERNMC para consultar
+              noticias, anuncios y futuras actualizaciones.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Cómo puedo reportar a un jugador?</summary>
+            <p>
+              Utiliza los canales de reporte que habilite el equipo.
+              Aporta información clara y pruebas relevantes cuando
+              estén disponibles.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Dónde consulto las reglas definitivas?</summary>
+            <p>
+              Revisa los canales oficiales. Las reglas de esta wiki
+              son orientativas hasta que el equipo publique la versión
+              definitiva.
+            </p>
+          </details>
+
+        </div>
+      </section>
+
+      <!-- COMUNIDAD -->
+      <section class="community-banner" id="comunidad">
+        <div class="section-label">FORMA PARTE DEL PROYECTO</div>
+
+        <h2>Únete a la comunidad de INFERNMC</h2>
+
+        <p>
+          Mantente informado sobre el desarrollo, las novedades,
+          los anuncios y las futuras actividades del servidor.
+        </p>
+
+        <a class="btn discord-invite"
+           href="https://discord.gg/r2YBStG73s"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-discord>
+          Entrar al Discord oficial
+        </a>
+
+        <p><small>INFERNMC Network · Proyecto en desarrollo</small></p>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <p><strong>INFERNMC NETWORK</strong></p>
+    <p>Wiki informativa de la comunidad de INFERNMC.</p>
+    <p>Estado del proyecto: En desarrollo.</p>
+    <p>
+      <a href="#inicio">Volver al inicio</a>
+      ·
+      <a href="https://discord.gg/r2YBStG73s"
+         target="_blank"
+         rel="noopener noreferrer"
+         data-discord>Discord</a>
+    </p>
+    <p>© <span id="currentYear">2026</span> INFERNMC Network.</p>
+  </footer>
+
+  <!-- NOTIFICACIONES -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const yearElement = document.getElementById("currentYear");
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
+  </script>
+
 </body>
 </html>
